@@ -1,0 +1,15 @@
+statics-url: /aalam/stock/s
+statics-path: resources
+entry-point: aalamstock_app.app:entry
+permissions:
+ permission-groups:
+   Items: Permissions to manage this app’s items
+ Items:
+   create: Enable an user to create items
+hooks:
+ hook:
+   - app: aalam/base
+     url: /aalam/base
+     method: GET
+     handler: aalamstock_app.app:hook_entry
+     type: B
